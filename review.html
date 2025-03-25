@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Reviews</title>
+  <style>
+
+*{ text-decoration:none;
+  align-items:center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+   nav{border:1px rgb(22, 20, 20);
+        width:99%;
+        height:160px; 
+        /* padding-right:10px;
+        padding-left:15px; */
+        display:flex;
+         }
+
+    .logo img{ width:110%;
+               height:150px;
+               padding:3px;
+                margin:25px; 
+               opacity:0.8;
+               
+            }     
+            nav .logo a{ font-size: 70px;
+                font-weight:900;
+             
+             }  
+
+    li{ list-style: none;
+        display: inline-block;
+         
+        }  
+        
+      
+
+    li a{color:rgb(175, 68, 26);
+         font-size:19px;
+         
+         
+         }    
+     
+    nav ul li {text-decoration:none;
+                 margin:10px 10px;
+                padding:20px 20px;}  
+
+    body {
+  
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.review-card {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.review-card:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #d9eaff;
+  
+  color: #0073e6;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.reviewer-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.reviewer-info p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.source {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+.time {
+  margin-left: auto;
+  font-size: 13px;
+  color: #888;
+}
+
+.rating {
+  font-weight: bold;
+  color: #ff9900;
+  margin: 5px 0;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url("image\img.avif");  */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  
+  color: rgb(157, 109, 109); 
+}
+
+.content {
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px;
+  display: inline-block;
+  margin: 50px auto;
+}
+        /* {
+            font-family : Arial, sans-serif;
+        } */
+        .review-container {
+            width: 60%;
+            margin: auto;
+        }
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .filter-section {
+            flex: 1 1 200px;
+        }
+        .filter-section h4 {
+            margin-bottom: 10px;
+        }
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .rating-bar input {
+            margin-right: 10px;
+        }
+        .progress-bar {
+            width: 100px;
+            height: 10px;
+            background: rgb(220, 189, 189);
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: green;
+        }
+        .search-bar {
+            margin-top: 30px;
+        }
+
+
+
+
+h2{color:#242322;}
+.review-header{background-color: rgba(233, 161, 102, 0.837)}
+.avatar{color:#0a11d3;}
+
+
+  .footer-container{ background-color: rgb(219, 224, 223);
+            padding:4rem;
+            display:flex;
+            color:rgb(230, 171, 84);
+            
+
+
+        } 
+    .Footer-heading{display: flex;
+                    flex-direction:column;
+                  margin-right:4rem;   }      
+                  
+    .Footer-heading a{color:brown;
+                      }              
+    
+              
+    input{ width:25%;
+           height:40px;
+           border-radius:4px;
+           border:none;
+           padding-left:0.9rem;
+           font-size:1 rem;
+           margin-bottom:1rem;
+     }        
+     .email::placeholder{color:beige;}
+ 
+     .SearchBar {
+                position: absolute;
+                top: 355px;
+                left: 575px;
+                height: 30px;
+                width: 50px;
+            }
+            .footer-container ul li {text-decoration:none;
+                 margin:1px 1px;
+                padding:0px 0px;}  
+
+  </style>
+</head>
+<body>
+  <div id="id1">
+    <header>
+        <nav class="navbar">
+            <div class="logo"> 
+              <a href="index.html"> <img src="images/Capture2.PNG" alt=""></a>
+             
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About US</a></li> 
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="review.html">Review</a></li>
+                <!-- <button>Order Now</button> -->
+            </ul>
+        </nav>
+    </header>
+
+
+  <div class="reviews-container">
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">C</div>
+        <div class="reviewer-info">
+          <h2>Tarundeep Kaur <br> &#9733 &#9733 &#9733 &#9733</h2>
+          
+        </div>
+        <p class="time">1 months ago</p>
+      </div>
+      <p class="rating">4/5</p>
+      <p class="review-text">
+        Jappacakes created our beautiful wedding cake for our wedding on Saturday 22nd June. The cake was exactly how I wanted and tasted delicious! Jappacakes also...
+      </p>
+    </div>
+    
+        <div class="review-card">
+          <div class="review-header">
+            <div class="avatar">C</div>
+            <div class="reviewer-info">
+              <h2>Pallavi <br> &#9733 &#9733 &#9733 &#9733</h2>
+              
+            </div>
+            <p class="time">1 months ago</p>
+          </div>
+          <p class="rating">4/5</p>
+          <p class="review-text">
+            “ The Pastries  from Butter bLiss Bakery was amazing !. I cant resist stoping by every weekend.
+                     I love there fresh bread! Always warm and perfect for sandwiches
+          </p>
+        </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">E</div>
+        <div class="reviewer-info">
+          <h2>Sanreet Kaur <br> &#9733 &#9733 &#9733</h2>
+    
+        </div>
+        <p class="time">2 months ago</p>
+      </div>
+      <p class="rating">3/5</p>
+      <p class="review-text">
+        Having worked for some time in the food industry, specifically in cake manufacturing, I can hand on heart say that Jappacakes make the best tasting cakes I’ve...
+      </p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">M</div>
+        <div class="reviewer-info">
+          <h2>Pawanpreet Kaur <br> &#9733 &#9733 &#9733 &#9733 &#9733</h2>
+          
+        </div>
+        <p class="time">4 month ago</p>
+      </div>
+      <p class="rating">5/5</p>
+      <p class="review-text">
+        The best wedding cake ever!!!! We loved it as did all our guests! From booking at the wedding show with a wee discount, to taster box, creating our design to...
+      </p>
+    </div>
+    
+    <div class="review-card">
+          <div class="review-header">
+            <div class="avatar">C</div>
+            <div class="reviewer-info">
+              <h2>Simranjeet Kaur <br> &#9733 &#9733 &#9733 &#9733</h2>
+            
+            </div>
+            <p class="time">3 months ago</p>
+          </div>
+          <p class="rating">4/5</p>
+          <p class="review-text">
+            The chocolate croissant from Butter Bliss Bakery is buttery, 
+                    flaky, and filled with rich dark chocolate. It’s perfectly crispy 
+                    on the outside and soft inside, making every bite delightful. A
+                     must-try for pastry lovers!
+          </p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">C</div>
+              <div class="reviewer-info">
+                <h2>Radhika <br> &#9733 &#9733 &#9733 &#9733 &#9733</h2>
+                
+              </div>
+              <p class="time">2 months ago</p>
+            </div>
+            <p class="rating">5/5</p>
+            <p class="review-text">
+              The chocolate croissant from Butter Bliss Bakery is buttery, 
+                      flaky, and filled with rich dark chocolate. It’s perfectly crispy 
+                      on the outside and soft inside, making every bite delightful. A
+                       must-try for pastry lovers!
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">C</div>
+              <div class="reviewer-info">
+                <h2>Rajji <br> &#9733 &#9733 &#9733 </h2>
+            
+              </div>
+              <p class="time">8 months ago</p>
+            </div>
+            <p class="rating">3/5</p>
+            <p class="review-text">
+                The cake was decent, but it didn’t quite meet our expectations. 
+                The design was nice, but the flavor was a bit off for our taste.
+            </p>
+            </div>
+
+
+
+            <div class="review-container">
+                <div  class="Review">
+                <h1>Reviews (146)</h1>
+                <div class="filter-group">
+                    
+                    <div class="filter-section">
+                        <h4>Traveller rating</h4>
+                        <div class="rating-bar">
+                            <input type="checkbox" id="excellent">
+                            <label for="excellent">Excellent</label>
+                            <div class="progress-bar"><span style="width: 0%;"></span></div>
+                        </div>
+                        <div class="rating-bar">
+                            <input type="checkbox" id="very-good">
+                            <label for="very-good">Very good</label>
+                            <div class="progress-bar"><span style="width: 100%;"></span></div>
+                        </div>
+                        <div class="rating-bar">
+                            <input type="checkbox" id="average">
+                            <label for="average">Average</label>
+                            <div class="progress-bar"><span style="width: 0%;"></span></div>
+                        </div>
+                        <div class="rating-bar">
+                            <input type="checkbox" id="poor">
+                            <label for="poor">Poor</label>
+                            <div class="progress-bar"><span style="width: 0%;"></span></div>
+                        </div>
+                        <div class="rating-bar">
+                            <input type="checkbox" id="terrible">
+                            <label for="terrible">Terrible</label>
+                            <div class="progress-bar"><span style="width: 0%;"></span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Traveller type</h4>
+                        <div>
+                            <input type="checkbox" id="families">
+                            <label for="families">Families</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="couples">
+                            <label for="couples">Couples</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="solo">
+                            <label for="solo">Solo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="business">
+                            <label for="business">Business</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="friends">
+                            <label for="friends">Friends</label>
+                        </div>
+                    </div>
+                    <!-- Time of year -->
+                    <div class="filter-section">
+                        <h4>Time of year</h4>
+                        <div>
+                            <input type="checkbox" id="mar-may">
+                            <label for="mar-may">Mar-May</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="jun-aug">
+                            <label for="jun-aug">Jun-Aug</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sep-nov">
+                            <label for="sep-nov">Sep-Nov</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dec-feb">
+                            <label for="dec-feb">Dec-Feb</label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Language</h4>
+                        <div>
+                            <input type="radio" id="all-languages" name="language" checked>
+                            <label for="all-languages">All languages</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="english" name="language">
+                            <label for="english">English (2)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <label for="search-reviews">See what travellers are saying:</label>
+                    <input type="text" id="search-reviews" placeholder="Search reviews">
+                </div>
+          </div>
+          
+        
+  </div>
+
+  <div class="footer-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html" >About US</a></li> 
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Review</a></li>
+        </ul>   
+      
+               <input type="email" placeholder="Enter Your email Address">    
+               <input type="submit" value="Sign Up">
+       
+  
+</div>       
+
+</body>
+</html>
